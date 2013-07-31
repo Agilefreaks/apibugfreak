@@ -10,6 +10,8 @@ gem 'thin'
 gem 'haml'
 gem 'haml-rails'
 
+gem 'zurb-foundation', '~> 4.3.1'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -36,15 +38,15 @@ gem 'grape-entity'
 gem 'grape-swagger'
 
 group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+	# bundle exec rake doc:rails generates the API under doc/api.
+	gem 'sdoc', require: false
 end
 
 group :development, :test do
-  gem 'awesome_print'
-  gem 'rb-inotify', '~> 0.9'
-  gem 'rspec-rails', '~> 2.0'
-  gem 'rspec-spies'
+	gem 'awesome_print'
+	gem 'rb-inotify', '~> 0.9'
+	gem 'rspec-rails', '~> 2.0'
+	gem 'rspec-spies'
 end
 
 # Use ActiveModel has_secure_password

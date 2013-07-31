@@ -1,4 +1,5 @@
 Apibugfreak::Application.routes.draw do
+	root 'pages#home'
 
 	mount Apibugfreak::API => '/'
 
