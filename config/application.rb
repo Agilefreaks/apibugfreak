@@ -27,7 +27,7 @@ module Apibugfreak
       g.view_specs false
     end
 
-    config.paths.add "app/api", glob: "**/*.rb"
+    config.paths.add 'app/api', glob: '**/*.rb'
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
   end
 end

@@ -47,6 +47,11 @@ group :development, :test do
 	gem 'rb-inotify', '~> 0.9'
 	gem 'rspec-rails', '~> 2.0'
 	gem 'rspec-spies'
+	gem 'mongoid-rspec'
+	gem 'guard-rspec'
+	gem 'guard-spork'
+	gem 'spork-rails', github: 'sporkrb/spork-rails'
+	gem 'simplecov'
 end
 
 # Use ActiveModel has_secure_password
