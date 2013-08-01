@@ -17,7 +17,7 @@
       %tr
         %td
           = link_to ua.name, user_application_path(ua)
-        %td= ua.errors.count
+        %td= ua.application_errors.size
         %td= ua.id
         %td
           = link_to 'Show', user_application_path(ua), class: 'button'
