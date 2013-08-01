@@ -2,7 +2,7 @@ class UserApplication
   include Mongoid::Document
 	include ErrorBuilder
 
-  field :name, type: String
+  field :name, type: String, default: ''
 
 	embeds_many :errors
 	belongs_to :user

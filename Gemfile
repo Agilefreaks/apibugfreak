@@ -58,6 +58,11 @@ group :development, :test do
 	gem 'guard-rspec'
 	gem 'guard-spork'
 	gem 'spork-rails', github: 'sporkrb/spork-rails'
+end
+
+group :test do
+	gem 'database_cleaner'
+	gem 'shoulda'
 	gem 'simplecov'
 end
 

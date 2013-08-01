@@ -1,0 +1,8 @@
+= content_for :title, 'New Application'
+
+%h2
+  New application
+
+= simple_form_for :user_application do |f|
+  = f.input :name
+  = f.submit 'Create', class: 'button'
