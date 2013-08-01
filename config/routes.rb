@@ -2,7 +2,11 @@ Apibugfreak::Application.routes.draw do
 	root 'pages#home'
 
 	devise_for :users, controllers: {:omniauth_callbacks => 'users/omniauth_callbacks'}
-	resources :user_applications
+
+	resources :user_applications do
+		resources :application_errors
+	end
+
 
 	mount Apibugfreak::API => '/'
 

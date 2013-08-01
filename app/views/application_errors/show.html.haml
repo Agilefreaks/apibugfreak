@@ -1,0 +1,24 @@
+= content_for :title, @application_error.message
+
+%h2
+  = link_to @user_application.name, user_application_path(@user_application)
+  = @application_error.message
+
+.section-container.auto{data: {section: ''}}
+  %section
+    %p.title{data: {section_title: ''}}
+      = link_to 'Message', '#message'
+    .content{data: {section_content: ''}}
+      %p= @application_error.message
+
+  %section
+    %p.title{data: {section_title: ''}}
+      = link_to 'Source', '#source'
+    .content{data: {section_content: ''}}
+      %p= @application_error.source
+
+  %section
+    %p.title{data: {section_title: ''}}
+      = link_to 'Stack trace', '#stack_trace'
+    .content{data: {section_content: ''}}
+      %p= @application_error.stack_trace

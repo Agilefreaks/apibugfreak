@@ -1,7 +1,8 @@
-class Error
+class ApplicationError
   include Mongoid::Document
+	include Mongoid::Timestamps
 
-  field :stack_trace, type: String
+	field :stack_trace, type: String
   field :source, type: String
   field :message, type: String
 

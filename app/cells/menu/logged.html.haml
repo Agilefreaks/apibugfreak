@@ -2,7 +2,8 @@
   = link_to 'Applications', user_applications_path
   %ul.dropdown
     - @current_user.user_applications.each do |a|
-      %li= a.name
+      %li
+        = link_to a.name, user_application_path(a)
     %li.divider
     %li
       = link_to 'New application', new_user_application_path

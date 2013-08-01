@@ -10,7 +10,7 @@ describe Resources::V1::ErrorsAPI do
 		end
 
 		it 'will be ok' do
-			expect(application).to receive(:create_error).with(message: 'message', source: 'source', stack_trace: 'stackTrace')
+			expect(application).to receive(:create_application_error).with(message: 'message', source: 'source', stack_trace: 'stackTrace')
 
 			#noinspection RubyStringKeysInHashInspection
 			post '/v1/api/errors', {'message' => 'message', 'source' => 'source', 'stackTrace' => 'stackTrace'}, {'Api-Key' => '123ApiKey', 'Token' => '123token', 'App-Name' => 'Test'}

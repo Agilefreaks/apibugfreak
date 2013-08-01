@@ -1,6 +1,8 @@
 class User
 	include Mongoid::Document
+	include Mongoid::Timestamps
 	include UserFinders
+	include UserApplicationBuilder
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

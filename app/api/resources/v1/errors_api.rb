@@ -4,7 +4,7 @@ module Apibugfreak
 			desc 'Create a error'
 			post do
 				authenticate!
-				current_application.create_error(message: params[:message], source: params[:source], stack_trace: params[:stackTrace])
+				current_application.create_application_error(message: params[:message], source: params[:source], stack_trace: params[:stackTrace])
 			end
 		end
 	end
