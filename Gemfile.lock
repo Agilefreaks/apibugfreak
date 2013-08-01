@@ -148,6 +148,7 @@ GEM
     multi_json (1.7.7)
     multi_xml (0.5.4)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.6.147)
     oauth2 (0.8.1)
       faraday (~> 0.8)
       httpauth (~> 0.1)
@@ -300,6 +301,7 @@ DEPENDENCIES
   jquery-rails
   mongoid (~> 4.0.0)!
   mongoid-rspec
+  newrelic_rpm
   omniauth-github
   omniauth-google-oauth2
   rails (= 4.0.0)

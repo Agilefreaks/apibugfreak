@@ -8,6 +8,8 @@ gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
 
 gem 'thin'
 
+gem 'newrelic_rpm'
+
 gem 'haml'
 gem 'haml-rails'
 
