@@ -25,7 +25,9 @@ module Apibugfreak
 
     config.generators do |g|
       g.view_specs false
-    end
+		end
+
+		config.assets.initialize_on_precompile = false
 
     config.paths.add 'app/api', glob: '**/*.rb'
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]

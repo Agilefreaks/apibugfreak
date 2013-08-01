@@ -12,6 +12,9 @@ gem 'haml-rails'
 
 gem 'zurb-foundation', '~> 4.3.1'
 
+gem 'cells'
+gem 'simple_form', '~> 3.0.0.rc'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -36,6 +39,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'grape'
 gem 'grape-entity'
 gem 'grape-swagger'
+
+gem 'devise'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
 
 group :doc do
 	# bundle exec rake doc:rails generates the API under doc/api.

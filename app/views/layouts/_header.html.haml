@@ -1,0 +1,10 @@
+%nav.top-bar
+  %ul.title-area
+    %li.name
+      %h1
+        = link_to 'Bugfreak', root_path
+
+  %section.top-bar-section
+    %ul.right
+      %li.divider.hide-for-small
+      = render_cell :menu, :show, user: current_user

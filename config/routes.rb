@@ -1,6 +1,8 @@
 Apibugfreak::Application.routes.draw do
 	root 'pages#home'
 
+	devise_for :users, controllers: {:omniauth_callbacks => 'users/omniauth_callbacks'}
+
 	mount Apibugfreak::API => '/'
 
 	# The priority is based upon order of creation: first created -> highest priority.
