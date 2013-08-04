@@ -9,16 +9,16 @@
     %p.title{data: {section_title: ''}}
       = link_to 'Message', '#message'
     .content{data: {section_content: ''}}
-      %p= @application_error.message
+      %p= simple_format(@application_error.message)
 
   %section
     %p.title{data: {section_title: ''}}
       = link_to 'Source', '#source'
     .content{data: {section_content: ''}}
-      %p= @application_error.source
+      %p= simple_format(@application_error.source)
 
   %section
     %p.title{data: {section_title: ''}}
       = link_to 'Stack trace', '#stack_trace'
     .content{data: {section_content: ''}}
-      %p= @application_error.stack_trace
+      %p= simple_format(@application_error.stack_trace)
