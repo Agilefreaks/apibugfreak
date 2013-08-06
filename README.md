@@ -1,5 +1,7 @@
 Apibugfreak
 ===========
+[![Build Status](https://travis-ci.org/Agilefreaks/apibugfreak.png?branch=staging)](https://travis-ci.org/Agilefreaks/apibugfreak)
+
 Bug tracking server
 
 Overview
