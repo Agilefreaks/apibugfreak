@@ -28,8 +28,9 @@ module Apibugfreak
 		end
 
 		config.assets.initialize_on_precompile = false
+		config.assets.precompile += %w( rainbow/csharp.js rainbow/generic.js rainbow/html.js rainbow/java.js rainbow/rainbow.min.js custom.modernizr.js rainbow/github.css )
 
-    config.paths.add 'app/api', glob: '**/*.rb'
+		config.paths.add 'app/api', glob: '**/*.rb'
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
   end
 end
