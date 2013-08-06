@@ -1,5 +1,8 @@
 Apibugfreak
 ===========
+[![Build Status](https://travis-ci.org/Agilefreaks/apibugfreak.png?branch=staging)](https://travis-ci.org/Agilefreaks/apibugfreak)
+[![Code Climate](https://codeclimate.com/github/Agilefreaks/apibugfreak.png)](https://codeclimate.com/github/Agilefreaks/apibugfreak)
+
 Bug tracking server
 
 Overview
