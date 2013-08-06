@@ -1,11 +1,11 @@
 %hr
 
 %row#android
-  .large-4.columns
+  .large-3.columns
     %h1.subheader Android
     = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/droidbugfreak'
 
-  .large-8.columns
+  .large-9.columns
     %p Add the reference to your build.gradle file
     %pre
       %code{'data-language' => 'java'}
@@ -22,15 +22,15 @@
           import com.omnipasteapp.droidbugfreak.GlobalConfig;
 
           public class CoolApplication extends Application {
-              @Override
-              public void onCreate() {
-                  super.onCreate();
+            @Override
+            public void onCreate() {
+              super.onCreate();
 
-                  // Setup with your account information
-                  GlobalConfig.Settings.setApiKey("apiKey");
-                  GlobalConfig.Settings.setToken("token");
+              // Setup with your account information
+              GlobalConfig.Settings.setApiKey("#{api_key(current_user)}");
+              GlobalConfig.Settings.setToken("#{token}");
 
-                  // Hook
-                  AgileReporter.hook(this);
-              }
+              // Hook
+              AgileReporter.hook(this);
+            }
           }

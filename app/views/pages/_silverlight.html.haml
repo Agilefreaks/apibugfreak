@@ -1,11 +1,11 @@
 %hr
 
 %row#silverlight
-  .large-4.columns
+  .large-3.columns
     %h1.subheader Silverlight
     = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak'
 
-  .large-8.columns
+  .large-9.columns
     %p Get it from nuget
     %pre
       %code{'data-language' => 'csharp'}
@@ -23,8 +23,8 @@
             public static void Main()
             {
               // Setup
-              BugFreak.GlobalConfig.Settings.ApiKey = "apiKey";
-              BugFreak.GlobalConfig.Settings.Token = "token";
+              BugFreak.GlobalConfig.Settings.ApiKey = "#{api_key(current_user)}";
+              BugFreak.GlobalConfig.Settings.Token = "#{token}";
 
               // Hook
               AgileReporter.Hook();
