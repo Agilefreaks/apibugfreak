@@ -15,5 +15,16 @@
 //= require turbolinks
 //= require_tree .
 //= require foundation
+//= require rainbow/rainbow.min
+//= require rainbow/csharp
+//= require rainbow/generic
+//= require rainbow/html
+//= require rainbow/java
+//= require custom.modernizr
+
 
 $(document).foundation();
+
+$(document).ready(function () {
+  Rainbow.color();
+});
