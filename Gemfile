@@ -47,6 +47,8 @@ gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 
+gem 'newrelic_rpm'
+
 group :production do
 	gem 'rails_12factor'
 end
