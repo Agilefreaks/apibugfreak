@@ -4,7 +4,8 @@
     %title= content_for?(:title) ? "Bugfreak - #{yield(:title)}" : 'Bugfreak'
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
 
-    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag    'application', media: "all", "data-turbolinks-track" => true
+    = yield :head
     = csrf_meta_tags
 
   %body

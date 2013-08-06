@@ -1,0 +1,36 @@
+%hr
+
+%row#android
+  .large-4.columns
+    %h1.subheader Android
+    = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/droidbugfreak'
+
+  .large-8.columns
+    %p Add the reference to your build.gradle file
+    %pre
+      %code{'data-language' => 'java'}
+        :preserve
+          dependencies {
+            compile 'com.omnipasteapp.droidbugfreak:BugFreak:1.0.+'
+          }
+
+    %p Setup and hook
+    %pre
+      %code{'data-language' => 'java'}
+        :preserve
+          import com.omnipasteapp.droidbugfreak.AgileReporter;
+          import com.omnipasteapp.droidbugfreak.GlobalConfig;
+
+          public class CoolApplication extends Application {
+              @Override
+              public void onCreate() {
+                  super.onCreate();
+
+                  // Setup with your account information
+                  GlobalConfig.Settings.setApiKey("apiKey");
+                  GlobalConfig.Settings.setToken("token");
+
+                  // Hook
+                  AgileReporter.hook(this);
+              }
+          }

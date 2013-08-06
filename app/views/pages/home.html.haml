@@ -1,2 +1,28 @@
-%p Hello my name is Freak
-%p Bugfreak
+= content_for :head do
+  = stylesheet_link_tag 'rainbow/github'
+
+%row
+  .large-6.columns
+    %h1 Some unique value proposition
+  .large-2.columns
+    %h1.subheader for
+  .large-4.columns
+    %ul.button-group-platforms
+      %li
+        = link_to 'Android', '#android', class: 'button'
+      %li
+        = link_to 'Wpf', '#wpf', class: 'button'
+      %li
+        = link_to 'Silverlight', '#silverlight', class: 'button'
+      %li
+        = link_to 'more to come', '#more'
+
+= render partial: 'pages/android'
+= render partial: 'pages/wpf'
+= render partial: 'pages/silverlight'
+= render partial: 'pages/more'
+
+= javascript_include_tag 'rainbow/rainbow.min'
+= javascript_include_tag 'rainbow/java'
+= javascript_include_tag 'rainbow/csharp'
+= javascript_include_tag 'rainbow/generic'
