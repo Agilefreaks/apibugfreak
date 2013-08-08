@@ -11,15 +11,15 @@
       %code{'data-language' => 'java'}
         :preserve
           dependencies {
-            compile 'com.omnipasteapp.droidbugfreak:BugFreak:1.0.+'
+            compile 'co.bugfreak:BugFreak:1.0.+'
           }
 
     %p Setup and hook
     %pre
       %code{'data-language' => 'java'}
         :preserve
-          import com.omnipasteapp.droidbugfreak.AgileReporter;
-          import com.omnipasteapp.droidbugfreak.GlobalConfig;
+          import co.bugfreak.BugFreak;
+          import co.bugfreak.GlobalConfig;
 
           public class CoolApplication extends Application {
             @Override
@@ -31,6 +31,6 @@
               GlobalConfig.Settings.setToken("#{token}");
 
               // Hook
-              AgileReporter.hook(this);
+              BugFreak.hook(this);
             }
           }
