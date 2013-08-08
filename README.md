@@ -7,7 +7,7 @@ Bug tracking server
 
 Overview
 ========
-A bare bones bug tracking framework that you can use and deploy your self, it's main aim is to integrate seemesly 
+A simple and very easy to use tracking framework that you can use and deploy your self, it's main aim is to integrate seemesly
 with your application and centralize issues in a main repository
 
 It's composed out of 3 parts so far:
