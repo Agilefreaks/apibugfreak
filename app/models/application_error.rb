@@ -5,6 +5,7 @@ class ApplicationError
 	field :stack_trace, type: String
   field :source, type: String
   field :message, type: String
+  field :additional_data, type: Hash
 
 	embedded_in :application
 

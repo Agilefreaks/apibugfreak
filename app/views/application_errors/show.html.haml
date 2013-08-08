@@ -13,6 +13,12 @@
 
   %section
     %p.title{data: {section_title: ''}}
+      = link_to 'Environment', '#environment'
+    .content{data: {section_content: ''}}
+      = render partial: 'application_errors/environment', locals: {hash: (@application_error.additional_data || {})}
+
+  %section
+    %p.title{data: {section_title: ''}}
       = link_to 'Source', '#source'
     .content{data: {section_content: ''}}
       %p= simple_format(@application_error.source)

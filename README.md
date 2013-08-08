@@ -29,5 +29,5 @@ Sample request
 
 Creating an error
 ```
-curl -d message=message -d source=source -d stackTrace=stackTrace 'http://localhost:3000/v1/api/errors' -H Content-Type:application/x-www-form-urlencoded -H "Token: 123token" -H "Api-Key: 123ApiKey" -v
+curl -d 'message=messag&ource=source&stackTrace=stackTrace&additionalData[system]=system&additionalData[version]=1.0.0.0' http://localhost:3000/v1/api/errors -H Content-Type:application/x-www-form-urlencoded -H "Token: 123token" -H "Api-Key: 123ApiKey" -v
 ```
