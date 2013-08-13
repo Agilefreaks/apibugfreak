@@ -8,38 +8,28 @@
         :preserve
           PM> Install-Package BugFreak.WPF
 
-    %p Add the configuration section to your app.config
+    %p And hook it up in your App.xaml.cs#OnStartup method
     %pre
-      %code{'data-language' => 'html'}
-        :config
-          <configSections>
-            <section name="BugFreak" type="System.Configuration.AppSettingsSection, System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-          </configSections>
-
-          <BugFreak>
-            <add key="ApiKey" value="#{api_key(current_user)}"/>
-            <add key="Token" value="#{token}"/>
-          </BugFreak>
-
-    %p Add hook code in App.xaml.cs
-    %pre
-      %code{'data-language' => 'csharp'}
+      %code{'data-language' => 'charp'}
         :preserve
+          using BugFreak;
+
           public partial class App
           {
-            using BugFreak.WPF;
+              protected override void OnStartup(System.Windows.StartupEventArgs e)
+              {
+                  base.OnStartup(e);
 
-            public static void Main()
-            {
-              // Hook
-              AgileReporter.Hook();
+                  GlobalConfig.Settings.ApiKey = "#{api_key(current_user)}";
+                  GlobalConfig.Settings.Token = "#{token}";
 
-              var application = new App();
-              application.InitializeComponent();
-              application.Run();
-            }
+                  BugFreak.Hook();
+              }
           }
 
   .large-3.columns
     %h1.subheader WPF
-    = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak'
+    %p
+      = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak', target: '_blank'
+    %p
+      = link_to 'Full sample', 'https://github.com/Agilefreaks/winbugfreak/tree/master/Code/Wpf.Sample', target: '_blank'

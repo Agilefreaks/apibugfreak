@@ -3,7 +3,10 @@
 %row#silverlight
   .large-3.columns
     %h1.subheader Silverlight
-    = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak'
+    %p
+      = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak', target: '_blank'
+    %p
+      = link_to 'Full sample', 'https://github.com/Agilefreaks/winbugfreak/tree/master/Code/Silverlight.Sample', target: '_blank'
 
   .large-9.columns
     %p Get it from nuget
@@ -12,21 +15,28 @@
         :preserve
           PM> Install-Package BugFreak.Silverlight
 
-    %p Setup and hook
+    %p And hook it up in your App.xaml.cs
     %pre
       %code{'data-language' => 'csharp'}
         :preserve
+          using BugFreak;
+
           public partial class App
           {
-            using BugFreak.Silverlight;
+              public App()
+              {
+                  this.Startup += this.Application_Startup;
 
-            public static void Main()
-            {
-              // Setup
-              BugFreak.GlobalConfig.Settings.ApiKey = "#{api_key(current_user)}";
-              BugFreak.GlobalConfig.Settings.Token = "#{token}";
+                  InitializeComponent();
+              }
 
-              // Hook
-              AgileReporter.Hook();
-            }
+              private void Application_Startup(object sender, StartupEventArgs e)
+              {
+                  this.RootVisual = new MainPage();
+
+                  GlobalConfig.Settings.ApiKey = "#{api_key(current_user)}";
+                  GlobalConfig.Settings.Token = "#{token}";
+
+                  BugFreak.Hook();
+              }
           }
