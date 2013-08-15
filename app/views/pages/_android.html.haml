@@ -3,7 +3,10 @@
 %row#android
   .large-3.columns
     %h1.subheader Android
-    = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/droidbugfreak'
+    %p
+      = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/droidbugfreak'
+    %p
+      = link_to 'Full sample', 'https://github.com/Agilefreaks/droidbugfreak/tree/master/sample', target: '_blank'
 
   .large-9.columns
     %p Add the reference to your build.gradle file
@@ -34,3 +37,9 @@
               BugFreak.hook(this);
             }
           }
+
+    %p You also need to have internet permission in your AndroidManifest.xml
+    %pre
+      %code{'data-language' => 'xml'}
+        :preserve
+          <uses-permission android:name="android.permission.INTERNET"/>
