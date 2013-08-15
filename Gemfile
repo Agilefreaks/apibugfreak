@@ -49,6 +49,8 @@ gem 'omniauth-github'
 
 gem 'newrelic_rpm'
 
+gem 'rack-ssl-enforcer'
+
 group :production do
 	gem 'rails_12factor'
 end
