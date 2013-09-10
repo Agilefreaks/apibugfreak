@@ -1,0 +1,29 @@
+%hr
+
+%row#mvc
+  .large-9.columns
+    %p Get it from nuget
+    %pre
+      %code{'data-language' => 'csharp'}
+        :preserve
+          PM> Install-Package BugFreak.MVC3
+
+    %p And hook it up in your Global.asax.cs
+    %pre
+      %code{'data-language' => 'charp'}
+        :preserve
+          using BugFreak;
+
+          public class MvcApplication : System.Web.HttpApplication
+          {
+            protected void Application_Start()
+            {
+              BuBugFreak.Hook("#{api_key(current_user)}", "#{token}");
+            }
+          }
+  .large-3.columns
+    %h1.subheader ASP.NET MVC3
+    %p
+      = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak', target: '_blank'
+    %p
+      = link_to 'Full sample', 'https://github.com/Agilefreaks/winbugfreak/tree/master/Code/Samples/MVC3.Sample', target: '_blank'

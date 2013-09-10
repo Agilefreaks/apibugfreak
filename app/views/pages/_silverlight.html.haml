@@ -23,20 +23,10 @@
 
           public partial class App
           {
-              public App()
-              {
-                  this.Startup += this.Application_Startup;
+            private void Application_Startup(object sender, StartupEventArgs e)
+            {
+              this.RootVisual = new MainPage();
 
-                  InitializeComponent();
-              }
-
-              private void Application_Startup(object sender, StartupEventArgs e)
-              {
-                  this.RootVisual = new MainPage();
-
-                  GlobalConfig.Settings.ApiKey = "#{api_key(current_user)}";
-                  GlobalConfig.Settings.Token = "#{token}";
-
-                  BugFreak.Hook();
-              }
+              BugFreak.Hook("#{api_key(current_user)}", "#{token}");
+            }
           }

@@ -1,0 +1,31 @@
+%hr
+
+%row#winrt
+  .large-3.columns
+    %h1.subheader WinRT
+    %p
+      = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/winbugfreak', target: '_blank'
+    %p
+      = link_to 'Full sample', 'https://github.com/Agilefreaks/winbugfreak/tree/master/Code/Samples/WinRT.Sample', target: '_blank'
+
+  .large-9.columns
+    %p Get it from nuget
+    %pre
+      %code{'data-language' => 'csharp'}
+        :preserve
+          PM> Install-Package BugFreak.WinRT
+
+    %p And hook it up in your App.xaml.cs
+    %pre
+      %code{'data-language' => 'csharp'}
+        :preserve
+          using BugFreak;
+
+          public partial class App
+          {
+            protected override void OnLaunched(LaunchActivatedEventArgs args)
+            {
+              BuBugFreak.Hook("#{api_key(current_user)}", "#{token}", this);
+            }
+          }
+    %p Make sure that the internet permission is allowed (it's on by default in a new project)

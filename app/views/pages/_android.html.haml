@@ -14,7 +14,7 @@
       %code{'data-language' => 'java'}
         :preserve
           dependencies {
-            compile 'co.bugfreak:BugFreak:1.0.+'
+            compile 'co.bugfreak:BugFreak:1.1.+'
           }
 
     %p Setup and hook
@@ -22,19 +22,14 @@
       %code{'data-language' => 'java'}
         :preserve
           import co.bugfreak.BugFreak;
-          import co.bugfreak.GlobalConfig;
 
           public class CoolApplication extends Application {
             @Override
             public void onCreate() {
               super.onCreate();
 
-              // Setup with your account information
-              GlobalConfig.Settings.setApiKey("#{api_key(current_user)}");
-              GlobalConfig.Settings.setToken("#{token}");
-
               // Hook
-              BugFreak.hook(this);
+              BugFreak.hook("#{api_key(current_user)}", "#{token}", this);
             }
           }
 
