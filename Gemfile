@@ -48,8 +48,6 @@ gem 'omniauth-github'
 
 gem 'newrelic_rpm'
 
-gem 'rack-ssl-enforcer'
-
 # deploy
 gem 'capistrano'
 gem 'rvm-capistrano'

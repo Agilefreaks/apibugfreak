@@ -32,9 +32,5 @@ module Apibugfreak
 
 		config.paths.add 'app/api', glob: '**/*.rb'
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
-
-    #unless Rails.env.development? || Rails.env.test? || Rails.env.staging?
-    #  config.middleware.use Rack::SslEnforcer
-    #end
   end
 end
