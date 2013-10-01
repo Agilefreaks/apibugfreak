@@ -53,7 +53,6 @@ gem 'rack-ssl-enforcer'
 # deploy
 gem 'capistrano'
 gem 'rvm-capistrano'
-gem 'capistrano-puma', require: false
 
 group :production do
 	gem 'rails_12factor'

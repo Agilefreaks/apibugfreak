@@ -1,9 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
 # Pick the frameworks you want:
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "sprockets/railtie"
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'sprockets/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -33,8 +33,8 @@ module Apibugfreak
 		config.paths.add 'app/api', glob: '**/*.rb'
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
 
-    #unless Rails.env.development? || Rails.env.test? || Rails.env.staging?
-    #  config.middleware.use Rack::SslEnforcer
-    #end
+    unless Rails.env.development? || Rails.env.test? || Rails.env.staging?
+      config.middleware.use Rack::SslEnforcer
+    end
   end
 end
