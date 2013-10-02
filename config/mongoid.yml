@@ -92,7 +92,7 @@ staging:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      uri: <%= ENV['MONGO_PRODUCTION'] %>
       options:
         consistency: :strong
         allow_dynamic_fields: false
