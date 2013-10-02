@@ -82,7 +82,7 @@ test:
 staging:
   sessions:
     default:
-      database: apibugfreak
+      database: apibugfreak_staging
       hosts:
         - <%= ENV['MONGO_HOST'] %>
       options:
