@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require foundation
 //= require rainbow/rainbow.min
 //= require rainbow/csharp
 //= require rainbow/generic
