@@ -49,8 +49,9 @@ gem 'omniauth-github'
 gem 'newrelic_rpm'
 
 # deploy
-gem 'capistrano'
-gem 'rvm-capistrano'
+gem 'capistrano', require: false
+gem 'rvm-capistrano', require: false
+gem 'capistrano-puma', require: false
 
 group :production do
 	gem 'rails_12factor'
