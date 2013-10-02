@@ -92,7 +92,9 @@ staging:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGO_PRODUCTION'] %>
+      database: apibugfreak
+      hosts:
+        - 10.70.174.67:27017
       options:
         consistency: :strong
         allow_dynamic_fields: false
