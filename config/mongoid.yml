@@ -82,7 +82,9 @@ test:
 staging:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      database: apibugfreak
+      hosts:
+        - <%= ENV['MONGO_HOST'] %>
       options:
         consistency: :strong
         allow_dynamic_fields: false
@@ -94,7 +96,7 @@ production:
     default:
       database: apibugfreak
       hosts:
-        - 10.70.174.67:27017
+        - <%= ENV['MONGO_HOST'] %>
       options:
         consistency: :strong
         allow_dynamic_fields: false
