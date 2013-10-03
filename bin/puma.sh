@@ -13,7 +13,7 @@ PUMA_SOCKET=../../shared/sockets/puma.sock
 puma_is_running() {
   if [ -S $PUMA_SOCKET ] ; then
     if [ -e $PUMA_PID_FILE ] ; then
-      if cat $PUMA_PID_FILE | xargs pgrep -P > /dev/null ; then
+      if cat $PUMA_PID_FILE | xargs ps h -P > /dev/null ; then
         return 0
       else
         echo "No puma process found"
@@ -53,7 +53,7 @@ case "$1" in
   restart)
     if puma_is_running ; then
       echo "Hot-restarting puma..."
-      kill -9 `cat $PUMA_PID_FILE`
+      kill -s SIGUSR2 `cat $PUMA_PID_FILE`
 
       echo "Double checking the process restart..."
       sleep 5
