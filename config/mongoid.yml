@@ -96,7 +96,9 @@ production:
     default:
       database: apibugfreak
       hosts:
-        - <%= ENV['MONGO_HOST'] %>
+        - <%= ENV['MONGO_HOST1'] %>
+        - <%= ENV['MONGO_HOST2'] %>
+        - <%= ENV['MONGO_HOST3'] %>
       options:
         consistency: :strong
         allow_dynamic_fields: false
