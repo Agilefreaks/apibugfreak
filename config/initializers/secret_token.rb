@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Apibugfreak::Application.config.secret_key_base = 'c5c1aff06084ea0bb85a05b23acd11acadcc3a3aafb991ef24aa2fb941e2b128cf789550a403c935dc4ac261fcbedda0de6df837360dd03593a13105c3ae1580'
+Apibugfreak::Application.config.secret_key_base = ENV['SECRET_TOKEN'] || 'c5c1aff06084ea0bb85a05b23acd11acadcc3a3aafb991ef24aa2fb941e2b128cf789550a403c935dc4ac261fcbedda0de6df837360dd03593a13105c3ae1580'
