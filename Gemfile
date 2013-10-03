@@ -7,8 +7,6 @@ gem 'puma'
 
 gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
 
-gem 'newrelic_rpm'
-
 gem 'haml'
 gem 'haml-rails'
 
@@ -47,6 +45,8 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 
 gem 'newrelic_rpm'
+gem 'newrelic_moped'
+gem 'newrelic-grape'
 
 # deploy
 gem 'capistrano', require: false

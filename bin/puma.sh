@@ -55,7 +55,7 @@ case "$1" in
       echo "Hot-restarting puma..."
       kill -9 `cat $PUMA_PID_FILE`
 
-      echo "Doublechecking the process restart..."
+      echo "Double checking the process restart..."
       sleep 5
       if puma_is_running ; then
         echo "done"
