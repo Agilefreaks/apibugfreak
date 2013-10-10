@@ -25,12 +25,12 @@ module Apibugfreak
 
     config.generators do |g|
       g.view_specs false
-		end
+    end
 
-		config.assets.initialize_on_precompile = false
-		config.assets.precompile += %w( rainbow/csharp.js rainbow/generic.js rainbow/html.js rainbow/java.js rainbow/rainbow.min.js custom.modernizr.js rainbow/github.css )
+    config.assets.initialize_on_precompile = false
+    config.assets.precompile += %w( rainbow/csharp.js rainbow/generic.js rainbow/html.js rainbow/java.js rainbow/rainbow.min.js custom.modernizr.js rainbow/github.css )
 
-		config.paths.add 'app/api', glob: '**/*.rb'
-    config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
+    config.paths.add 'app/api', glob: '**/*.rb'
+    config.autoload_paths += %W(#{Rails.root}/app/api #{Rails.root}/app/services)
   end
 end

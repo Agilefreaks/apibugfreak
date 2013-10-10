@@ -18,7 +18,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
       sign_in(@user, :bypass => true)
       redirect_to after_update_path_for(@user)
     else
-      render :action => 'devise/registrations/edit'
+      #noinspection RailsParamDefResolve
+      render :action => :edit
     end
   end
 
