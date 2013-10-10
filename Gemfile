@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
-#ruby '2.1.0', engine: 'rbx', engine_version: '2.0.0'
-ruby '2.0.0'
+ruby '2.1.0', engine: 'rbx', engine_version: '2.0.0'
 
-#gem 'rubysl', '~> 2.0'
+gem 'rubysl', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
@@ -79,7 +78,6 @@ end
 group :test do
 	gem 'database_cleaner'
 	gem 'shoulda'
-	gem 'simplecov'
 end
 
 # Use ActiveModel has_secure_password

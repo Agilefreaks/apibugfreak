@@ -22,7 +22,7 @@ module Apibugfreak
 			end
 
 			def current_application
-				@current_application ||= current_user.find_user_application(headers['Token'])
+				@current_application ||= current_user.find_user_application(headers['Token'], :application_errors)
 			end
 
 			def authenticate!

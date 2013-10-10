@@ -7,8 +7,8 @@ module UserFinders
 		end
 	end
 
-	def find_user_application(token)
-		user_applications.without(:application_errors).find(token)
+	def find_user_application(token, without_fields = [])
+		user_applications.without(without_fields).find(token)
 	end
 
 	def find_provider(uid, name)

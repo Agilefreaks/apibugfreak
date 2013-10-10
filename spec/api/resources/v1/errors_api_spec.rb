@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe Resources::V1::ErrorsAPI do
   describe "POST '/v1/errors'" do
-    let(:application) { UserApplication.new }
-    let(:user) { mock_model(User, find_user_application: application) }
+    let(:application) { Fabricate(:user_application, id: '123Token') }
+    let!(:user) { Fabricate(:user, api_key: '123ApiKey') }
 
     let(:params) {
       {
@@ -16,13 +16,13 @@ describe Resources::V1::ErrorsAPI do
     }
 
     before do
-      User.stub_chain(find_by: user)
+      user.user_applications.push(application)
     end
 
     it 'will be ok' do
       expect_any_instance_of(ApplicationErrorService).to receive(:create_application_error)
 
-      post '/v1/api/errors', params, {'Api-Key' => '123ApiKey', :'Token' => '123token', 'App-Name' => 'Test'}
+      post '/v1/api/errors', params, {'Api-Key' => '123ApiKey', :'Token' => '123Token' }
 
       expect(response.status).to eq 201
     end
