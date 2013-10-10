@@ -11,7 +11,9 @@ class UserApplicationsController < ApplicationController
 
 	def show
 		@user_application = current_user.find_user_application(params[:id])
-		respond_with @user_application
+    @user_applications = @user_application.application_errors.order_by_created_at_desc.page(params[:page])
+
+		respond_with @user_application, @user_applications
 	end
 
 	def new

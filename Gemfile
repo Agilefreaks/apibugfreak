@@ -49,6 +49,7 @@ gem 'omniauth-github'
 gem 'newrelic_rpm'
 gem 'newrelic_moped'
 gem 'newrelic-grape'
+gem 'kaminari'
 
 # deploy
 gem 'capistrano', require: false
