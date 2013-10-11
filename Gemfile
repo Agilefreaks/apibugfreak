@@ -70,15 +70,13 @@ group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'rspec-spies'
 	gem 'mongoid-rspec'
-	gem 'guard-rspec'
-	gem 'guard-spork'
-	gem 'spork-rails', github: 'sporkrb/spork-rails'
   gem 'fabrication'
 end
 
 group :test do
 	gem 'database_cleaner'
 	gem 'shoulda'
+  gem 'zeus', '0.13.4.pre2'
 end
 
 # Use ActiveModel has_secure_password
