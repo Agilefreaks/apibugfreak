@@ -51,10 +51,6 @@ gem 'newrelic_moped'
 gem 'newrelic-grape'
 gem 'kaminari'
 
-# deploy
-gem 'capistrano', require: false
-gem 'rvm-capistrano', require: false
-
 group :production do
 	gem 'rails_12factor'
 end
@@ -71,6 +67,12 @@ group :development, :test do
 	gem 'rspec-spies'
 	gem 'mongoid-rspec'
   gem 'fabrication'
+
+  # deploy
+  gem 'capistrano', '~> 3.0', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm', require: false, github: 'capistrano/rvm'
 end
 
 group :test do
