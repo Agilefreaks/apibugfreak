@@ -1,6 +1,6 @@
 rails_env = ENV['RAILS_ENV'] || 'development'
 
-environment development
+environment 'development'
 
 daemonize false
 
