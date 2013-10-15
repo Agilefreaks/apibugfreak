@@ -28,3 +28,8 @@ app_environment_variables.rb
 # Zeus
 zeus.json
 custom_plan.rb
+
+# Capistrano
+config/deploy/*.rb
+config/deploy.rb
+Capfile
