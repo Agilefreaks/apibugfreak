@@ -18,6 +18,7 @@ namespace :puma do
           state_file = "#{shared_path}/sockets/puma.state"
 
           execute "kill -9 `cat #{pid_file}`"
+          sleep 3
           execute "rm #{pid_file}"
           execute "rm #{socket_file}"
           execute "rm #{state_file}"
@@ -28,7 +29,6 @@ namespace :puma do
 
   task :restart do
     invoke 'puma:stop'
-    sleep 5
     invoke 'puma:start'
   end
 
