@@ -2,7 +2,7 @@ rails_env = ENV['RAILS_ENV'] || 'development'
 
 environment rails_env
 
-daemonize false
+daemonize true
 
 threads 0,16
 

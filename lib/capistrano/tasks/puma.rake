@@ -3,7 +3,7 @@ namespace :puma do
   task :start do
     on roles(:app) do
       within release_path do
-        execute :bundle, :exec, "puma --config #{release_path}/config/puma.rb &"
+        execute :bundle, :exec, 'puma --config config/puma.rb'
       end
     end
   end
