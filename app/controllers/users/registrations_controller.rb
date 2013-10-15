@@ -1,5 +1,4 @@
 class Users::RegistrationsController < Devise::RegistrationsController
-
   def update
     @user = User.find(current_user.id)
 
@@ -29,7 +28,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
     user.email != params[:user][:email] || params[:user][:password].present?
   end
 
+  def sign_up_params
+    params.require(:user).permit(*permit_params)
+  end
+
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :password, :password_confirmation, :current_password)
+    params.require(:user).permit(*permit_params.append(:current_password))
+  end
+
+  def permit_params
+    [:email, :first_name, :last_name, :password, :password_confirmation]
   end
 end
