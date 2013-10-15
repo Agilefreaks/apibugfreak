@@ -9,16 +9,18 @@ namespace :puma do
   end
 
   task :stop do
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:app), in: :sequence do
       within shared_path do
         pid_file = "#{shared_path}/sockets/puma.pid"
 
         if test("[ -e #{pid_file} ]")
           socket_file = "#{shared_path}/sockets/puma.sock"
+          state_file = "#{shared_path}/sockets/puma.state"
 
           execute "kill -9 `cat #{pid_file}`"
           execute "rm #{pid_file}"
           execute "rm #{socket_file}"
+          execute "rm #{state_file}"
         end
       end
     end
@@ -26,6 +28,7 @@ namespace :puma do
 
   task :restart do
     invoke 'puma:stop'
+    sleep 5
     invoke 'puma:start'
   end
 
