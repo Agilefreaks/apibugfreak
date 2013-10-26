@@ -7,4 +7,9 @@
   %section.top-bar-section
     %ul.right
       %li.divider.hide-for-small
+
+      %li
+        = link_to 'About', about_path
+
+      %li.divider.hide-for-small
       = render_cell :menu, :show, user: current_user

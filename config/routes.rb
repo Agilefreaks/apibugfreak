@@ -5,8 +5,9 @@ Apibugfreak::Application.routes.draw do
 
 	resources :user_applications do
 		resources :application_errors
-	end
+  end
 
+  get 'about', :controller => :pages
 
 	mount Apibugfreak::API => '/'
 
