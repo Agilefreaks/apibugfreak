@@ -5,7 +5,7 @@ ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
-gem 'puma', '2.5.1'
+gem 'puma', '2.6.0'
 
 gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
 
@@ -73,6 +73,7 @@ group :development, :test do
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm', require: false, github: 'capistrano/rvm'
+  gem 'capistrano-puma', require: false, github: 'balauru/capistrano-puma'
 end
 
 group :test do
