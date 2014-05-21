@@ -72,12 +72,12 @@ test:
       database: apibugfreak_test
       hosts:
         - localhost:27017
-      options:
-        consistency: :strong
-        # In the test environment we lower the retries and retry interval to
-        # low amounts for fast failures.
-        max_retries: 1
-        retry_interval: 0
+  options:
+    consistency: :strong
+    # In the test environment we lower the retries and retry interval to
+    # low amounts for fast failures.
+    max_retries: 1
+    retry_interval: 0
 
 staging:
   sessions:
@@ -87,11 +87,11 @@ staging:
         - <%= ENV['MONGO_HOST1'] %>
         - <%= ENV['MONGO_HOST2'] %>
         - <%= ENV['MONGO_HOST3'] %>
-      options:
-        raise_not_found_error: true
-        use_utc: true
-        use_activesupport_time_zone: true
-        identity_map_enabled: true
+  options:
+    raise_not_found_error: true
+    use_utc: true
+    use_activesupport_time_zone: true
+    identity_map_enabled: true
 
 production:
   sessions:
@@ -101,8 +101,8 @@ production:
         - <%= ENV['MONGO_HOST1'] %>
         - <%= ENV['MONGO_HOST2'] %>
         - <%= ENV['MONGO_HOST3'] %>
-      options:
-        raise_not_found_error: true
-        use_utc: true
-        use_activesupport_time_zone: true
-        identity_map_enabled: true
+  options:
+    raise_not_found_error: true
+    use_utc: true
+    use_activesupport_time_zone: true
+    identity_map_enabled: true
