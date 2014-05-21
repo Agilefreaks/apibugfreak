@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.2'
 
 #gem 'rubysl', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
-gem 'puma', '2.6.0'
+gem 'rails', '4.1.1'
+gem 'puma'
 
-gem 'mongoid', '~> 4.0.0', github: 'mongoid/mongoid'
+gem 'mongoid', '~> 4.0.0.beta1'
 
 gem 'haml'
 gem 'haml-rails'
@@ -18,13 +18,13 @@ gem 'cells'
 gem 'simple_form', '~> 3.0.0.rc'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.1'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -69,11 +69,11 @@ group :development, :test do
   gem 'fabrication'
 
   # deploy
-  gem 'capistrano', '~> 3.0', require: false
+  gem 'capistrano', '~> 3.2', require: false
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
-  gem 'capistrano-rvm', require: false, github: 'capistrano/rvm'
-  gem 'capistrano-puma', require: false, github: 'balauru/capistrano-puma'
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano3-puma', require: false
 end
 
 group :test do
