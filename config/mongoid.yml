@@ -91,7 +91,6 @@ staging:
     raise_not_found_error: true
     use_utc: true
     use_activesupport_time_zone: true
-    identity_map_enabled: true
 
 production:
   sessions:
@@ -105,4 +104,3 @@ production:
     raise_not_found_error: true
     use_utc: true
     use_activesupport_time_zone: true
-    identity_map_enabled: true
