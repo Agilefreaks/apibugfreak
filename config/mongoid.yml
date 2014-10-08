@@ -78,9 +78,7 @@ staging:
     default:
       database: apibugfreak_staging
       hosts:
-        - 10.70.174.67:27017
-        - 10.70.174.68:27017
-        - 10.70.174.69:27017
+        - 10.133.243.142:27017
   options:
     raise_not_found_error: true
     use_utc: true
@@ -91,9 +89,7 @@ production:
     default:
       database: apibugfreak
       hosts:
-        - 10.70.174.67:27017
-        - 10.70.174.68:27017
-        - 10.70.174.69:27017
+        - 10.133.243.142:27017
   options:
     raise_not_found_error: true
     use_utc: true
