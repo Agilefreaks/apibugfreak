@@ -11,7 +11,7 @@ require 'spec_helper'
 #   end
 # end
 describe PagesHelper do
-  describe :api_key do
+  describe 'api_key' do
     subject { api_key(current_user) }
 
     context 'when current_user is nil' do
@@ -21,7 +21,7 @@ describe PagesHelper do
     end
 
     context 'when current_user is not nil' do
-      let(:current_user) { mock_model(User, api_key: '42') }
+      let(:current_user) { double(User, api_key: '42') }
 
       it { should == '42' }
     end
