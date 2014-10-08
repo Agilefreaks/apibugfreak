@@ -63,9 +63,11 @@ end
 group :development, :test do
 	gem 'awesome_print'
 	gem 'rb-inotify', '~> 0.9'
-	gem 'rspec-rails', '~> 3.1'
+	gem 'rspec-rails'
 	gem 'rspec-mocks'
-	gem 'mongoid-rspec'
+  gem 'rspec-spies'
+  gem 'spring-commands-rspec'
+  gem 'mongoid-rspec'
   gem 'fabrication'
   gem 'database_cleaner'
   gem 'spring'
