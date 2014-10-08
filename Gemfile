@@ -1,27 +1,27 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
+ruby '2.1.3'
 
 #gem 'rubysl', '~> 2.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.6'
 gem 'puma'
 
-gem 'mongoid', '~> 4.0.0.beta1'
+gem 'mongoid', '~> 4.0.0'
 
 gem 'haml'
 gem 'haml-rails'
 
-gem 'zurb-foundation', '~> 4.3.1'
+gem 'zurb-foundation', '~> 4.3.2'
 
 gem 'cells'
-gem 'simple_form', '~> 3.0.0.rc'
+gem 'simple_form', '~> 3.0.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '>= 2.5.3'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.1'
@@ -36,7 +36,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.2'
+gem 'jbuilder', '~> 2.2'
 
 gem 'grape'
 gem 'grape-entity'
@@ -63,10 +63,12 @@ end
 group :development, :test do
 	gem 'awesome_print'
 	gem 'rb-inotify', '~> 0.9'
-	gem 'rspec-rails', '~> 2.0'
-	gem 'rspec-spies'
+	gem 'rspec-rails', '~> 3.1'
+	gem 'rspec-mocks'
 	gem 'mongoid-rspec'
   gem 'fabrication'
+  gem 'database_cleaner'
+  gem 'spring'
 
   # deploy
   gem 'capistrano', '~> 3.2', require: false
@@ -77,9 +79,7 @@ group :development, :test do
 end
 
 group :test do
-	gem 'database_cleaner'
 	gem 'shoulda'
-  gem 'zeus', '0.13.4.pre2'
 end
 
 # Use ActiveModel has_secure_password
