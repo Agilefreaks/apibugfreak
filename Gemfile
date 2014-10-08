@@ -12,7 +12,7 @@ gem 'mongoid', '~> 4.0.0'
 gem 'haml'
 gem 'haml-rails'
 
-gem 'zurb-foundation', '~> 4.3.2'
+gem 'foundation-rails'
 
 gem 'cells'
 gem 'simple_form', '~> 3.0.2'

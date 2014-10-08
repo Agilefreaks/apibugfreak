@@ -1,7 +1,7 @@
 %li.has-dropdown
   = link_to 'Applications', user_applications_path
   %ul.dropdown
-    - @current_user.user_applications.each do |a|
+    - @current_user.user_applications.where(:id.ne => nil).each do |a|
       %li
         = link_to a.name, user_application_path(a)
     %li.divider

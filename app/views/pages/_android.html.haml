@@ -1,40 +1,41 @@
-%hr
+%section
+  %hr
 
-%row#android
-  .large-3.columns
-    %h1.subheader Android
-    %p
-      = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/droidbugfreak'
-    %p
-      = link_to 'Full sample', 'https://github.com/Agilefreaks/droidbugfreak/tree/master/sample', target: '_blank'
+  %row#android
+    .large-3.columns
+      %h1.subheader Android
+      %p
+        = link_to 'Fork it on Github', 'https://github.com/Agilefreaks/droidbugfreak'
+      %p
+        = link_to 'Full sample', 'https://github.com/Agilefreaks/droidbugfreak/tree/master/sample', target: '_blank'
 
-  .large-9.columns
-    %p Add the reference to your build.gradle file
-    %pre
-      %code{'data-language' => 'java'}
-        :preserve
-          dependencies {
-            compile 'co.bugfreak:BugFreak:1.1.+'
-          }
-
-    %p Setup and hook
-    %pre
-      %code{'data-language' => 'java'}
-        :preserve
-          import co.bugfreak.BugFreak;
-
-          public class CoolApplication extends Application {
-            @Override
-            public void onCreate() {
-              super.onCreate();
-
-              // Hook
-              BugFreak.hook("#{api_key(current_user)}", "#{token}", this);
+    .large-9.columns
+      %p Add the reference to your build.gradle file
+      %pre
+        %code{'data-language' => 'java'}
+          :preserve
+            dependencies {
+              compile 'co.bugfreak:BugFreak:1.1.+'
             }
-          }
 
-    %p You also need to have internet permission in your AndroidManifest.xml
-    %pre
-      %code{'data-language' => 'xml'}
-        :preserve
-          <uses-permission android:name="android.permission.INTERNET"/>
+      %p Setup and hook
+      %pre
+        %code{'data-language' => 'java'}
+          :preserve
+            import co.bugfreak.BugFreak;
+
+            public class CoolApplication extends Application {
+              @Override
+              public void onCreate() {
+                super.onCreate();
+
+                // Hook
+                BugFreak.hook("#{api_key(current_user)}", "#{token}", this);
+              }
+            }
+
+      %p You also need to have internet permission in your AndroidManifest.xml
+      %pre
+        %code{'data-language' => 'xml'}
+          :preserve
+            <uses-permission android:name="android.permission.INTERNET"/>

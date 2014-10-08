@@ -21,8 +21,8 @@
 //= require rainbow/html
 //= require rainbow/java
 
-$(document).foundation();
-
 $(document).ready(function () {
   Rainbow.color();
 });
+
+$(function(){ $(document).foundation(); });
