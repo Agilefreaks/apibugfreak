@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.2.1'
 
 #gem 'rubysl', '~> 2.0'
 
@@ -7,7 +7,7 @@ ruby '2.1.5'
 gem 'rails', '4.1.6'
 gem 'puma'
 
-gem 'mongoid', '~> 4.0.0'
+gem 'mongoid', '~> 4.0.2'
 
 gem 'haml'
 gem 'haml-rails'
